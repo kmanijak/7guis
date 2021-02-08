@@ -1,0 +1,37 @@
+{
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir public",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "name": "exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Karol Manijak",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-jest": "^26.1.0",
+    "jest": "^26.1.0",
+    "parcel": "^1.12.4",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "preact": "^10.4.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
